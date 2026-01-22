@@ -13,7 +13,7 @@ class ProfileAPIView(APIView):
     # GET → fetch logged-in user's profile
     def get(self, request):
         try:
-            profile = request.user.profile
+            profile = UserProfile.objects.get(user = request.user)
         except UserProfile.DoesNotExist:
             return Response(
                 {"error": "Profile not found"},

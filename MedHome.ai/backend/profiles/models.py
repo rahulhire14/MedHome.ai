@@ -18,6 +18,9 @@ class UserProfile(models.Model):
 
     PhoneNumber = models.CharField(max_length=15)
 
+    address = models.TextField(blank=True, null=True)
+
+
     created_on=models.DateField(auto_now_add=True)
     updated_on =models.DateField(auto_now_add=True)
 

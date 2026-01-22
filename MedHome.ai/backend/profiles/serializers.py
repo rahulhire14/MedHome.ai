@@ -8,6 +8,6 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = [
             "full_name",
             "gender",
-            "phone",
+            "PhoneNumber",
             "address",
         ]
