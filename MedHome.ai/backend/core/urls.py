@@ -7,11 +7,12 @@ from django.http import HttpResponse
 def home(request):
     return HttpResponse(
         """
-        <h1>MedHome.ai Backend Running 🚀</h1>
+        <h1>MedHome.ai Backend Running </h1>
         <p>Authentication & Profile APIs are active.</p>
         <ul>
             <li>/api/auth/</li>
             <li>/api/profile/</li>
+             <li>/api/medcinies/</li>
             <li>/admin/</li>
         </ul>
         """
@@ -23,4 +24,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/auth/", include("accounts.urls")),
     path("api/profile/", include("profiles.urls")),
+    path("api/medcinies/",include("medicines.urls"))
 ]
